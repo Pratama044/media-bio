@@ -1,0 +1,223 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    overflow-y: hidden;
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    background-color: black;
+    position: relative;
+}
+body .container{
+    transition: .3s;
+    width: 100vh;
+    z-index: 99999;
+    position: relative;
+    background: linear-gradient(#0075FF, white);
+    height: 100vh;
+    background-size: cover;
+}
+body .container .logo{
+    padding: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.logo img{
+    width: 30px;
+    
+}
+.logo .toggle{
+    cursor: pointer;
+}
+.logo .judul{
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+.container .icon{
+    text-align: center;
+    color: white;
+    font-size: 12px;
+}
+.icon img{
+    width: 100px;
+    border: 4px solid rgb(59, 189, 232);
+    border-radius: 50%;
+}
+.container::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    opacity: .3;
+    z-index: -999;
+    background: url('natan.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: ;
+    
+}
+.container .media{
+    text-align: center;
+}
+.media .col{
+    border: 1px solid white;
+    width: 90%;
+    display: flex;
+    justify-content: ;
+    padding: .4rem 1rem;
+    margin: 1rem auto;
+    border-radius: 20px;
+    text-align: center;
+    transition: .3s;
+}
+.col h3{
+    text-align: center;
+    color: white;
+    text-align: center;
+    margin: auto;
+    position: relative;
+    right: 13px;
+}
+.col img{
+    float: left;
+    display: flex;
+    justify-content: start;
+    width: 30px;
+    opacity: .7;
+}
+.col:nth-child(3) img{
+    box-shadow: 0 0 5px white;
+    border-radius: 50%;
+}
+.col:nth-child(1){
+    background: linear-gradient(45deg,#FF4910, #ff48101e);
+    transition: .3s;
+}
+.col:nth-child(1):hover{
+    background: linear-gradient(-45deg,#FF4910, #ff48101e);
+}
+.col:nth-child(2){
+    background: linear-gradient(45deg,#06bef6, #06bef637);
+}
+.col:nth-child(2):hover{
+    background: linear-gradient(-45deg,#06bef6, #06bef637);
+}
+.col:nth-child(3){
+    background: linear-gradient(45deg,#000000, #00000037);
+}
+.col:nth-child(3):hover{
+    background: linear-gradient(-45deg,#000000, #00000037);
+}
+.bottom{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 2rem;
+    padding-top: 5rem;
+}
+.bottom .more{
+    background-color: #e010d9;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .3s;
+}
+.bottom .more:hover{
+    background-color: red;
+}
+.more h4{
+    text-align: center;
+    color: white;
+    position: relative;
+    top: 6px;
+}
+.bottom .wa img{
+    width: 40px;
+}
+.extra {
+    position: fixed;
+    width: 250px;
+    height: 300px;
+    text-align: center;
+    top: 200px;
+    margin: auto;
+    z-index: 9999999999;
+    border-radius: 12px;
+    background-color: white;
+    display: none;
+    animation: masuk .5s;
+    box-shadow: 0 0 10px white;
+
+}
+@keyframes masuk{
+    0%{
+        transform: scale(0);
+    }
+    70%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+.extra p{
+    padding-top: 3rem;
+}
+.extra img{
+    width: 100px;
+}
+.extra button{
+    margin-top: 3rem;
+    padding: .5rem 1rem;
+    background-color: #e010d9;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .3s;
+}
+.extra button:hover{
+    background-color: red;
+}
+.bio {
+    position: absolute;
+    text-align: center;
+    bottom: -100vh;
+    height: 100vh;
+    width: 100%;
+    margin: auto;
+    z-index: 9999999999;
+    display: ;
+    background-color: rgba(165, 243, 255, 0.842);
+    padding-top: 2rem;
+    transition: .2s;
+}
+.bio .close{
+    font-size: 20px;
+    cursor: pointer;
+    width: 95%;
+    text-align: end;
+}
+.bio ul li{
+    padding: .5rem;
+    color: black;
+    transition: .3s;
+    position: relative;
+    font-weight: bold;
+}
+ul li a:hover{
+    color: red;
+    
+}
