@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="con" class="container">
+        <video autoplay muted loop id="myvidio">
+            <source src="blend.mp4" type="video/mp4">
+        </video>
+        <div class="logo">
+            <div class="toggle" onclick="tog()">
+                <img src="Group 1.png" alt="">
+            </div>
+            <div class="music" id="music">
+                <img src="music.jpg" alt="" style="cursor: pointer;">
+            </div>
+            <div class="judul">Kaizen.</div>
+        </div>
+        <div class="icon">
+            <img src="Group 2.png" alt="">
+            <h2>Hello Cuy!</h2>
+            <h2>Paid edit web bisa lewat</h2>
+            <h2>Whatsapp</h2>
+        </div>
+        <div class="media">
+            <a href="https://instagram.com/ekaedipratama030601?igshid=YmMyMTA2M2Y=" class="col">
+                <img src="instagram.jpg" alt="">
+                <h3>Instagram</h3>
+            </a>
+            <a href="https://t.me/+SyZKmZu_kU5hZDhl" class="col">
+                <img src="telegram.png" alt="">
+                <h3>Telegram</h3>
+            </a>
+            <a href="https://www.tiktok.com/@senp4ikun?_t=8ZEeelamHmz&_r=1" class="col">
+                <img src="tok.png" alt="">
+                <h3>Tiktok</h3>
+            </a>
+        </div>
+        <div class="bottom">
+            <div class="more" onclick="more()">
+                <h4>?</h4>
+            </div>
+            <div class="wa" onclick="wa()">
+                <img src="wa.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div id="extra" class="extra">
+        <img src="logo-gura.jpg" alt="">
+        <p>Liat doang kaga order </br>Huu gak like!!</p>
+        <button onclick="out()">Terserah Gua</button>
+    </div>
+    <div id="wa" class="extra">
+        <img src="nana.jpg" alt="">
+        <p>Nah gitu dong </br>Order yaa😍!!</p>
+        <a href="https://wa.me/qr/4Q4OKC2G2HI2A1">
+            <button onclick="out1()">Lanjut Wa</button>
+        </a>
+    </div>
+    <div class="bio" id="bio" style="display: ;">
+        <div onclick="keluar()" class="close">X</div>
+        <ul>
+            <li><a href="">Profil</a></li>
+            <li><a href="https://github.com/Pratama044?tab=repositories">Github</a></li>
+            <li><a href="https://www.linkedin.com/in/eka-edi-pratama-4b1b03253/">Linkedin</a></li>
+        </ul>
+    </div>
+    <script>
+        function more(){
+            document.getElementById('extra').style.display = 'block';
+            document.getElementById('con').style.opacity = '.3';
+        }
+        function out(){
+            document.getElementById('extra').style.display = 'none';
+            document.getElementById('con').style.opacity = '1';
+        }
+        function tog(){
+            document.getElementById('bio').style.bottom = '0';
+            document.getElementById('con').style.opacity = '.5';
+        }
+        function keluar(){
+            document.getElementById('bio').style.bottom = '-100vh';
+            document.getElementById('con').style.opacity = '1';
+        }
+        function wa(){
+            document.getElementById('wa').style.display = 'block';
+            document.getElementById('con').style.opacity = '.3';
+        }
+        let play = document.getElementById("music");
+        function playMusic(){
+            let audio = new Audio("anime.mp3");
+            audio.play()
+        }
+        play.addEventListener("click", playMusic);
+
+    </script>
+</body>
+</html>
